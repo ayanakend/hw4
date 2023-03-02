@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Love Calculator</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="second_name">Your lover name</string>
+    <string name="first_name">Your name</string>
+    <string name="calculate">Calculate</string>
+    <string name="click_to_heart">Click on heart to calculate</string>
+    <string name="return_tv">return</string>
+    <string name="your_percentage">Your percent of love:</string>
+    <string name="warning">Click on Calculator to start!</string>
+</resources>

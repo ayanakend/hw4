@@ -15,7 +15,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="150dp"
         android:hint="@string/first_name"
         app:boxCornerRadiusBottomStart="15dp"
         app:boxCornerRadiusTopEnd="15dp"
@@ -77,5 +77,16 @@
         app:lottie_rawRes="@raw/heart_lottie_animation"
         app:lottie_speed="1" />
 
+    <Button
+        android:id="@+id/history_btn"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:backgroundTint="@color/dark_pink"
+        android:text="History"
+        android:textColor="@color/white"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calculate_lottie" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

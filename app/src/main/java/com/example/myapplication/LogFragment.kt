@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 
 class LogFragment : Fragment() {
+    private val pref by lazy { Preferences(requireContext()) }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -22,7 +23,11 @@ class LogFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         val handler = Handler()
         handler.postDelayed({
-            findNavController().navigate(R.id.homeFragment)
+            if (pref.isUserSeen()) {
+                findNavController().navigate(R.id.homeFragment)
+            }else{
+                findNavController().navigate(R.id.boardingFragment)
+            }
         }, 5000)
     }
 }

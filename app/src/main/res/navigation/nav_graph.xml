@@ -20,4 +20,14 @@
         android:name="com.example.myapplication.LogFragment"
         android:label="fragment_warning"
         tools:layout="@layout/fragment_log" />
+    <fragment
+        android:id="@+id/boardingFragment"
+        android:name="com.example.myapplication.onBoarding.BoardingFragment"
+        android:label="fragment_boarding"
+        tools:layout="@layout/fragment_boarding" />
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="com.example.myapplication.history.HistoryFragment"
+        android:label="fragment_history"
+        tools:layout="@layout/fragment_history" />
 </navigation>

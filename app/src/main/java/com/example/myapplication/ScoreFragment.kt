@@ -8,7 +8,9 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.example.myapplication.databinding.FragmentScoreBinding
 import com.example.myapplication.remote.LoveModel
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class ScoreFragment : Fragment() {
     private lateinit var binding: FragmentScoreBinding
     override fun onCreateView(

@@ -8,5 +8,7 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="pink">#EAC7C7</color>
-    <color name="red">#EB455F</color>
+    <color name="dark_pink">#E91E63</color>
+    <color name="red">#B80622</color>
+    <color name="gray">#4E4E4E</color>
 </resources>

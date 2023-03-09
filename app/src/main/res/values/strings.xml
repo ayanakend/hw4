@@ -9,4 +9,5 @@
     <string name="return_tv">return</string>
     <string name="your_percentage">Your percent of love:</string>
     <string name="warning">Click on Calculator to start!</string>
+    <string name="line">____________________________________</string>
 </resources>

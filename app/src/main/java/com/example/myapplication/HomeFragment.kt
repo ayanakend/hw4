@@ -11,8 +11,9 @@ import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import com.example.myapplication.databinding.FragmentHomeBinding
 import com.example.myapplication.viewmodel.LoveViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
-
+@AndroidEntryPoint
 class HomeFragment : Fragment() {
     lateinit var binding: FragmentHomeBinding
     private val viewModel: LoveViewModel by viewModels()
@@ -26,12 +27,21 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        binding.historyBtn.setOnClickListener{
+            findNavController().navigate(R.id.historyFragment)
+        }
         binding.calculateLottie.setOnClickListener {
-            viewModel.getLiveLove(binding.outlinedTextFieldFname.editText?.text.toString(), binding.outlinedTextFieldSname.editText?.text.toString() )
-                .observe(viewLifecycleOwner, Observer {loveModel->
+            viewModel.getLiveLove(
+                binding.outlinedTextFieldFname.editText?.text.toString(),
+                binding.outlinedTextFieldSname.editText?.text.toString()
+            )
+                .observe(viewLifecycleOwner, Observer { loveModel ->
+                    App.appDatabase.loveDao().insert(loveModel)
                     findNavController().navigate(R.id.scoreFragment, bundleOf(
                         "model" to loveModel
-                    ))
+                    )
+                    )
+
                 })
         }
     }

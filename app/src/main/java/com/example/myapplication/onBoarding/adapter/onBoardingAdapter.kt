@@ -14,19 +14,19 @@ class onBoardingAdapter(private val onClick: () -> Unit) :
     var data = arrayListOf(
         onBoard(
             "Скоро на свидание? Узнайте совместимость с партнёром!",
-            R.drawable.board1
+            R.raw.date
         ),
         onBoard(
             "Стоит выходить замуж, или же этот человек не для вас?",
-            R.drawable.board2
+            R.raw.marriage
         ),
         onBoard(
             "Удобный калькулятор у вас в телефоне!",
-            R.drawable.board3
+            R.raw.phone
         ),
         onBoard(
             "Внимание! Приложение не имеет связи с реальным миром. Все совпадения случайны!",
-            R.drawable.board4
+            R.raw.warning
         )
     )
 
